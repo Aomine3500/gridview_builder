@@ -20,6 +20,7 @@ List<Student> students = [
   Student(name: "Iyad", adresse: "Kuwait", occupation: "Barber"),
   Student(name: "Rim", adresse: "KSA", occupation: "Doctor"),
   Student(name: "Loay", adresse: "UAE", occupation: "Actor"),
+  Student(name: "Atika", adresse: "Australia", occupation: "Attorney"),
 ];
 
 class Home extends StatelessWidget {
@@ -40,6 +41,7 @@ class Home extends StatelessWidget {
         itemCount:
             students.length, // Don't forget itemCount with the Builder option
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            //required
             crossAxisCount: 2,
             mainAxisSpacing: 20.0,
             crossAxisSpacing: 20.0,
@@ -51,15 +53,15 @@ class Home extends StatelessWidget {
               title: Text(
                 students[index].name,
                 style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w700,
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
                     color: Colors.green[400]),
                 textAlign: TextAlign.center,
               ),
               subtitle: Text(
                 "Adresse: ${students[index].adresse} \nOccupation: ${students[index].occupation}",
                 style: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 18,
                     fontWeight: FontWeight.w500,
                     color: Colors.black87),
                 textAlign: TextAlign.center,
